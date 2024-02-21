@@ -1,5 +1,6 @@
 on day six most of the task on a website called reeborgs world where we have to write function
 code for challege call hurdle 1 is-
+
 def turn_right():
     turn_left()
     turn_left()
@@ -143,6 +144,8 @@ while not at_goal():
     else:
         turn_left()
     
+
+ending of day 6
        
     
     
