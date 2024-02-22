@@ -146,30 +146,3 @@ while not at_goal():
     
 
 ending of day 6
-       
-    
-    
-    
-    
-
-    
-  
-    
-
-    
-
-    
-  
-    
-
-    
-
-    
-    
-    
-
-    
-  
-    
-
-    
