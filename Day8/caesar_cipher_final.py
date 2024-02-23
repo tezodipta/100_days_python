@@ -29,7 +29,7 @@ while True:
         print(f"Your {direction} message is {new_text}")
 
     caesar(text,shift,direction)
-    repeat = input("Do you want to go again? Type 'yes' or 'no': ")
+    repeat = input("Do you want to go again? Type 'yes' or 'no': ").lower()
     if repeat == "no":
         break
 
