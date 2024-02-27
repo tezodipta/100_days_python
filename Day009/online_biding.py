@@ -1,6 +1,6 @@
 #importing
 import os
-from art import logo
+from Day012.art import logo
 
 
 #clear function to clear console

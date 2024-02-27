@@ -1,5 +1,5 @@
 #importing logo
-from art import logo
+from Day012.art import logo
 
 
 #create function for add,sub,mul,div,mod

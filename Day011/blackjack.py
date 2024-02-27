@@ -1,7 +1,7 @@
 #it is a card gane names b;ack jack 
 import random
 import os
-from art import logo
+from Day012.art import logo
 cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
 
 def add_card():
