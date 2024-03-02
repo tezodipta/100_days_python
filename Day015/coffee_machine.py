@@ -13,6 +13,7 @@ def report():
     print(f"water: {resources["water"]}")
     print(f"Milk: {resources["milk"]}")
     print(f"Coffee: {resources["coffee"]}")
+    print(f"Money: {resources["money"]}")
 
 def resource_check(coffee):
     """this function will check the resources of the coffee machine"""
@@ -38,13 +39,38 @@ def transaction(coffee, total):
         print(f"here is your {coffee} ☕️. Enjoy!")
         resources["money"] += MENU[coffee]["cost"]
         if total >MENU[coffee]["cost"]:
-            change = total - MENU[coffee]["cost"]
+            change = round((total - MENU[coffee]["cost"]),2)
             print(f"here is your change {change}")
+        for item in MENU[coffee]["ingredients"]:
+            resources[item] -= MENU[coffee]["ingredients"][item]
+    else:
+        print("Sorry that's not enough money. Money refunded.")
+        return
  
+def refil():
+    """this function will refil the coffee machine"""
+    resources = {
+    "water": 300,
+    "milk": 200,
+    "coffee": 100,
+    "money": 0,
+    }  
+    return resources 
 
+while True:
+    coffee = input("What would you like? (espresso/latte/cappuccino): ").lower()
+    if coffee == "off":
+        print("The coffee machine is off")
+        exit()
+    elif coffee == "report":
+        report()
+    elif coffee == "refil":
+        resources=refil()
+    elif coffee not in MENU:
+        print("Invalid input")
+    else:
+        check = resource_check(coffee)
 
-coffee = input("What would you like? (espresso/latte/cappuccino): ").lower()
-check = resource_check(coffee)
-if check:
-    total = balance_count()
-    transaction(coffee, total)
+        if check:
+            total = balance_count()
+            transaction(coffee, total)
