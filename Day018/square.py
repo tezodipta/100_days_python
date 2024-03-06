@@ -6,7 +6,7 @@ color = ["CornflowerBlue","DarkOrchid","IndianRed","DeepSkyBlue","LightSeaGreen"
 t.colormode(255)
 turtle = Turtle()
 
-turtle.pensize(10)
+# turtle.pensize(10)
 turtle.speed("fastest")
 
 
@@ -51,11 +51,18 @@ def random_walk(steps):
         turtle.forward(30)
         turtle.setheading(random.choice([0,90,180,270]))
 
+def draw_sporograph(size_of_gap):
+    """this function will draw a sporograph """
+    for i in range(int(360/size_of_gap)):
+        turtle.color(random_color())
+        turtle.circle(100)
+        turtle.setheading(turtle.heading() + size_of_gap)
+
 
 # square(200)
 # dash(10,15)
 # shape(8)
-
-random_walk(100) 
+# random_walk(100) 
+# draw_sporograph(5)
 screen = Screen()
 screen.exitonclick()
