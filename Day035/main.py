@@ -20,7 +20,7 @@ parameter = {
     "lat":my_lat,
     "lon":my_lng,
     "appid":API_KEY,
-    "exxlude": "current,minutely,daily"
+    "exclude": "current,minutely,daily"
 
 }
 
